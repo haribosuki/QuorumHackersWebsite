@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="BIOMOD 2022 website">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- IEの互換モード無効化 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1"><!-- レスポンシブデザインへの対応 -->
+    <title>BIOMOD 2022 Quorum Hacker</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><!-- jQuery読み込み -->
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script><!-- BootstrapのJS読み込み -->
+    <script>
+        //header,footerの読み込み
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+</head>
+<div id="header"></div>
+<body>
+    <main>
+        <h1>Notebook</h1>
+        <section>
+            <div>
+                <h2>Reaction</h2>
+                <p>Biofilm is prevented by disturbing quorum sensing.<br>
+                    Here, we proposed ...
+                </p>
+            </div>
+            <img src="images/yp_aptamer_noaxis.png" alt="explanation1">
+        </section>
+        <section>
+            <div>
+                <h2>Structure</h2>
+                <p>Quormone is attacked by aptamer.<br>
+                    Here, we proposed ...
+                </p>
+            </div>
+            <img src="images/MFE_aptamer.png" alt="explanation2">
+        </section>
+    </main>
+    </body>
+<div id="footer"></div>
+</html>

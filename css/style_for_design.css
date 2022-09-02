@@ -1,0 +1,243 @@
+@charset "UTF-8";
+
+header {
+    background-color: #666;
+}
+header .navbar-nav {
+    margin-left: auto;
+}
+header .dropdown-menu {
+    background-color:rgb(233, 215, 60)
+}
+header .dropdown-menu a:active{
+    background-color:rgb(233, 215, 60)
+}
+header .dropdown-menu p:active{
+    color: #000;
+}
+header .dropdown-menu a:hover{
+    background-color:rgb(255, 230, 0)
+}
+#navbarDropdownMenuLink {
+    color: #ffffff;
+}
+#navbarDropdownMenuLink:hover {
+    color: rgb(255, 230, 0)
+}
+#nav_button {
+    color: #ffffff;
+}
+#nav_button:hover {
+    color: rgb(255, 230, 0)
+}
+
+
+footer {
+    background-color: #666;
+    padding: 10px;
+}
+footer li {
+    text-align: center;
+    list-style: none;
+    color: #fff;
+}
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+footer a:hover {
+    text-decoration: none;
+    color: rgb(233, 215, 60);
+}
+
+footer .col p {
+    margin: 0;
+    text-align: center;
+    color: #000;
+}
+
+video {
+    width: 100%;
+    clip-path: inset(10px);
+    margin: -10px;
+    text-align: center;
+}
+
+
+
+/* team */
+.group_photo .img-fluid {
+    /* 集合画像 */
+    width: 100%;
+}
+
+.kakomi-box3 {
+    /* シンプル 枠（影）1 */
+    margin: 2em auto;
+    padding: 1em;
+    width: 90%;
+    border: 1px solid #ccc;
+    /* 枠線 */
+    background-color: #fff;
+    /* 背景色 */
+    box-shadow: 1px 1px 2px #ccc;
+}
+
+.indvidual_photo {
+    /* 個人画像 */
+    text-align: center;
+}
+
+.col .img-fluid {
+    /* 個人画像丸にする */
+    border-radius: 50%;
+}
+
+.team_intro h1 {
+    /* teamの見出し */
+    border-bottom: 5px solid #bebebe;
+    padding-bottom: 5px;
+    text-indent: 1em;
+}
+
+/* elsi */
+.elsi h1 {
+    border-bottom: 5px solid #bebebe;
+    padding-bottom: 5px;
+    text-indent: 1em;
+}
+
+
+/*ナビゲーションの固定*/
+/*ナビゲーションの固定*/
+
+#illustrations-area section {
+    /*stickyで固定*/
+    position: -webkit-sticky;
+    /*Safari*/
+    position: sticky;
+    /*固定したい位置*/
+    top: 30%;
+    /*ナビゲーションの形状*/
+    background: #fff;
+    padding: 5px;
+}
+
+#sub-area nav {
+    /*stickyで固定*/
+    position: -webkit-sticky;
+    /*Safari*/
+    position: sticky;
+    /*固定したい位置*/
+    top: 30%;
+    /*ナビゲーションの形状*/
+    background: #fff;
+    padding: 20px;
+}
+
+
+/*レイアウトのためのCSS*/
+#container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#illustrations-area {
+    width: 30%;
+    padding: 0 0 0 20px;
+}
+
+#main-area {
+    width: 45%;
+}
+
+#sub-area {
+    width: 20%;
+    padding: 0 20px 0 0;
+}
+
+/*768px以下の見え方*/
+@media screen and (max-width:768px) {
+    #illustrations-area {
+        width: 50%;
+        padding: 20px;
+        margin: 0 0 0 auto;
+    }
+
+
+
+    #illustrations-area.fixed {
+        position: fixed;
+        /*fixedを設定して固定*/
+        z-index: 999;
+        /*最前面へ*/
+        top: 10%;
+        /*位置指定*/
+        right: 0;
+        /*位置指定*/
+    }
+
+
+
+
+    #main-area {
+        width: 100%;
+    }
+
+    #sub-area {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #sub-area nav {
+        position: relative;
+        /*stickyからrelativeに戻す*/
+        top: 0;
+    }
+}
+
+/* 以下は検証用のレイアウトのための CSS*/
+#sub-area nav ul li a {
+    text-decoration: none;
+    color: #666;
+    padding: 10px;
+}
+
+#main-area section {
+    padding: 30px 0 100px 30px;
+}
+
+/*========= 現在地表示のためのCSS ===============*/
+/* 以下はレイアウトのための CSS*/
+#sub-area nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+#sub-area nav ul li a {
+    display: block;
+    transition: all 0.3s;
+}
+
+#sub-area nav ul li.current a,
+#sub-area nav ul li a:hover {
+    color: rgb(233, 215, 60);
+}
+
+@media screen and (max-width:768px) {
+    #sub-area nav ul li a:hover {
+        color: rgb(233, 215, 60);
+    }
+
+    #sub-area nav ul li a {
+        color: #666;
+    }
+}
+
+/* illustrations */
