@@ -72,6 +72,9 @@ video {
     margin: -10px;
     text-align : center;
 }
+.index_photo img {
+    width: 100%;
+}
 
 
 /* team */
