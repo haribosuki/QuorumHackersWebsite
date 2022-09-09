@@ -114,6 +114,9 @@ video {
     padding-bottom: 5px;
     text-indent: 1em;
 }
+.elsi_card .col {
+    margin: 10px;
+}
 
 
 /*ナビゲーションの固定*/
