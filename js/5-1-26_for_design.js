@@ -28,8 +28,14 @@ $(NavElem[0]).addClass('current');//1つめのliに現在地クラスを付与
 else if(scroll >= elemTop[1] && scroll < elemTop[2]) {//.scroll-point 1つめ（area-1）以上.scroll-point 2つめ（area-2）未満
 $(NavElem[1]).addClass('current');//2つめのliに現在地クラスを付与
 } 
-else if(scroll >= elemTop[2]) {// .scroll-point 2つめ（area-2）以上
+else if(scroll >= elemTop[2] && scroll < elemTop[3]) {//.scroll-point 2つめ（area-2）以上.scroll-point 3つめ（area-3）未満
 $(NavElem[2]).addClass('current');//3つめのliに現在地クラスを付与
+	}
+else if(scroll >= elemTop[3] && scroll < elemTop[4]) {//.scroll-point 3つめ（area-3）以上.scroll-point 4つめ（area-4）未満
+$(NavElem[3]).addClass('current');//4つめのliに現在地クラスを付与
+	}
+else if(scroll >= elemTop[4]) {// .scroll-point 4つめ（area-3）以上
+$(NavElem[4]).addClass('current');//5つめのliに現在地クラスを付与
 } 
 }
 

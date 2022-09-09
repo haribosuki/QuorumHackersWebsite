@@ -156,6 +156,9 @@ video {
     width: 20%;
     padding: 0 20px 0 0;
 }
+#area-5 li {
+    list-style-type: none;
+}
 
 /*768px以下の見え方*/
 @media screen and (max-width:768px) {
