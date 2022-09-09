@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"><!-- レスポンシブデザインへの対応 -->
     <title>BIOMOD 2022 Quorum Hacker</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_for_simulation.css">
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><!-- jQuery読み込み -->
     <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script><!-- BootstrapのJS読み込み -->
@@ -17,7 +17,7 @@
     <script src="js/5-1-10.js"></script> <!--subnavの自作のJS-->
     <script src=”js/stickyfill.min.js”></script> <!--subnavのJS　Gitから-->
     <script src=”js/stickyfill.js”></script> <!--subnavのJS　Gitから-->
-    <script src="js/5-1-26.js"></script> <!--現在地表示の自作のJS-->
+    <script src="js/5-1-26_for_simulation.js"></script> <!--現在地表示の自作のJS-->
 
 
 
@@ -36,36 +36,77 @@
     <main id="main-area">
         <h1>Simulation</h1>
         <section class="scroll-point" id="area-1">
-            <h2>NUPACK</h2>
-            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+            <h2>Simulation Items</h2>
+            <li>1. Thermodynamic simulation</li>
+            <li>2. Structural prediction</li>
+            <li>3. The design of amplification circuit</li>
+            <li>4. Threshold setting</li>
+            <p>Before the experiments of electrophoresis, we made predictions about the stability of each DNA strand and the possible conformations it could take. We also simulated the threshold values and amplification rates for the amplification mechanism inside the molecular robot.</p>
         </section>
         <section class="scroll-point" id="area-2">
-            <h2>Visual DSD</h2>
-            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+            <h2>Thermodynamic simulation</h2>
+            <p>The thermodynamic stability of the DNA strand was investigated using DINAMelt.</p>
+            <p>The Tm values for hybridization of DNA Aptamer (Pool99) and output 1 and the predicted heat capacity of the complex are shown below.</p>
+            <img src="images/aptamer+output_Tm.png">
+            <p>Fig.1 The Tm values for hybridization of DNA Aptamer (Pool99) and output 1 (NaCl:40mM  MgCl<sub>2</sub>:12.5mM)</p>
+            <p>The predicted Tm value was 66.0°C. This result confirms that thermal dissociation of output1 from DNA Aptamer (Pool99) does not occur at 37°C.</p>
         </section>
         <section class="scroll-point" id="area-3">
-            <h2>DACCAD</h2>
-            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+            <h2>Structural prediction</h2>
+            <p>The prediction of secondary structure of DNA Aptamer (Pool99) was performed using NUPACK. The results are shown below.</p>
+            <img src="images/NUPACK_Aptamer.png">
+            <p>Fig.2 The predicted secondary structure of DNA Aptamer (Pool99).</p>
+            <p>Similarly, the prediction of secondary structure for the Aptamer sensor (DNA Aptamer (Pool99) + output 1) was conducted. The results are shown below.</p>
+            <img src="images/NUPACK_Aptamer+output1.png">
+            <p>Fig.3 The predicted secondary structure of Aptamer sensor.</p>
+
+            <p>We also used 3dRNA/DNA to predict the tertiary structure of DNA Aptamer (Pool99). The result is shown below.</p>
+            <img src="images/yp_aptamer_noaxis.png">
+            <p>Fig.4 The predicted tertiary structure of DNA Aptamer (Pool99).</p>
+        </section>
+        <section class="scroll-point" id="area-4">
+            <h2>The design of amplification circuit</h2>
+            <p>The PEN toolbox is used as a mechanism to detect the input from the sensor and produce Aptamer outputs. Since the PEN toolbox requires consideration of the interaction between the DNA strand and the enzyme in the reaction process, each reaction is non-linear. In designing the amplification circuit, a schematic design of the reaction system was performed using DACCAD.</p>
+            <p>DNA Artificial Circuits Computer-Assisted Design (DACCAD) is software developed for the purpose of quickly and easily designing complex circuits such as the PEN toolbox using directed graphs. When simulating with DACCAD, we predict changes in signal concentration based on the following theory.</p>
+            <img src="images/DACCADtheory.png">
+            <p>The directed graph displayed by DACCAD is shown below.</p>
+            <img src="images/DACCADimage.png">
+            <p>Fig.5 The directed graph on DACCAD screen(S1: Aptamer, S2: Input from aptamer sensor).</p>
+            <p>For the signal from the sensor and the DNA strand of drain, we added the reaction by using COPASI. COmplex PAthway Simulator (COPASI) is an application software for simulation and analysis of biochemical networks and dynamics.</p>
+            <img src="images/bistable_abstract.png">
+            <p>Dissociation constants were determined from the Gibbs free energy for each DNA strand according to the number of bases of the strand. Each Gibbs free energy was predicted using DINAMelt.</p>
+            <p>The concentration of input1 used in the simulation was estimated under the condition of 5 nM of quormone concentration, which is considered to form biofilms. Assuming that the diameter of "Quorum Hacker" is 20 µm and that 0.001% of the DNA aptamers are present relative to the total number of lipid molecules on the GUVs surface, the concentration of DNA aptamers on the lipid bilayer surface relative to the volume of GUVs is estimated to be 540 nM. Solving the equation below using the reported dissociation constant for DNA aptamers, Kd = 28.47, we find that under a 5 nM quormone concentration, approximately 80 nM of DNA aptamers react, releasing an equivalent amount of output1. Since the amount of output1 actually recognized by the transmembrane signalling mechanism is decayed by auto-diffusion, the simulation was performed at concentrations less than 1/100 of the released concentration.</p>
+            <img src="images/critical_concentration.png">
+            <li>[A] = Concentration of C4-HSL</li>
+            <li>[AB] = DNA aptamer and C4-HSL complex (Aptamer sensor)</li>
+            <li>[C] = Concentration of DNA aptamer</li>
+            <li>Kd = Dissociation constant</li>
+            <p>The following demonstrates a circuit in which 0.5nM input is detected, resulting in amplification of aptamer.</p>
+            <p>The initial concentrations of template2to1, which outputs aptamer by the input, template1to1, which amplifies input, and the initial concentrations of input were set at 10nM, 100nM, and 0.5nM, respectively. Then, COPASI was used to simulate the change in concentration of aptamer at different drain concentrations.</p>
+            <img src="images/Aptamer_DifferentDrain.png">
+            <p>Fig.6　Change in aptamer concentration with different drain concentrations</p>
+            <p>Ct in Fig.6 represents the amplification start time of aptamer at each drain concentration. The start time of Aptamer amplification increased with increasing drain concentration, and the concentration remained constant after Ct.</p>
+        </section>
+        <section class="scroll-point" id="area-5">
+            <h2>Threshold setting</h2>
+            <p>he concentration of drain is determined from the results of changes in the concentration of aptamer from the start of the reaction. A graph was created with 1/Ct on the vertical axis and the concentration of drain on the horizontal axis.</p>
+            <img src="images/1Ct_DrainConcentration.png">
+            <p>Fig.7 The scatter plot of 1/Ct  with different drain concentrations.</p>
+            <p>From the above, the threshold drain concentration was set to 200nM.</p>
+            <p>Next, we simulated the changes in time of aptamer generation when different Inputs were given, when the concentration of DRAIN was set to 200nM.</p>
+            <img src="images/aptamer_DifferentInput.png">
+            <p>Fig.8 Change in aptamer concentration with different input concentrations</p>
+            <p>The result above confirms that drain plays a role as threshold value.</p>
         </section>
     </main>
     <aside id="sub-area">
         <nav id="g-nav">
             <ul id="g-navi">
-                <li><a href="#area-1">NUPACK</a></li>
-                <li><a href="#area-2">Visual DSD</a></li>
-                <li><a href="#area-3">DACCAD</a></li>
+                <li><a href="#area-1">Simulation Items</a></li>
+                <li><a href="#area-2">Thermodynamic simulation</a></li>
+                <li><a href="#area-3">Structural prediction</a></li>
+                <li><a href="#area-4">The design of amplification circuit</a></li>
+                <li><a href="#area-5">Threshold setting</a></li>
             </ul>
         </nav>
     </aside>
