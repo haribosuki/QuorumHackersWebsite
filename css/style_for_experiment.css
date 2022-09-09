@@ -106,7 +106,17 @@ video {
     padding-bottom: 5px;
     text-indent: 1em;
 }
-
+/* experiment */
+table {
+    width: 60%;
+    margin: 0px 10px 0px 20px;
+}
+table.element, td, th {
+    border-bottom: 1px solid black;
+}
+.volume {
+    text-align: right;
+}
 
 /*ナビゲーションの固定*/
 /*ナビゲーションの固定*/
