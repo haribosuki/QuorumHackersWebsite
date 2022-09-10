@@ -7,10 +7,20 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"><!-- レスポンシブデザインへの対応 -->
     <title>BIOMOD 2022 Quorum Hacker</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_for_notebook.css">
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><!-- jQuery読み込み -->
     <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script><!-- BootstrapのJS読み込み -->
+    
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> <!-- subnavと現在地表示のjQuery読み込み -->
+    <script src="js/5-1-10.js"></script> <!--subnavの自作のJS-->
+    <script src=”js/stickyfill.min.js”></script> <!--subnavのJS　Gitから-->
+    <script src=”js/stickyfill.js”></script> <!--subnavのJS　Gitから-->
+    <script src="js/5-1-26_for_notebook.js"></script> <!--現在地表示の自作のJS-->
+
+
+
     <script>
         //header,footerの読み込み
         $(function () {
@@ -19,29 +29,164 @@
         });
     </script>
 </head>
-<div id="header"></div>
+
 <body>
-    <main>
-        <h1>Notebook</h1>
-        <section>
-            <div>
-                <h2>Reaction</h2>
-                <p>Biofilm is prevented by disturbing quorum sensing.<br>
-                    Here, we proposed ...
-                </p>
-            </div>
-            <img src="images/yp_aptamer_noaxis.png" alt="explanation1">
+<div id="header"></div>
+<div id="container">
+    <main id="main-area">
+        <h1>Simulation</h1>
+        <section class="scroll-point" id="area-1">
+            <h2>Experimental Items</h2>
+            <li>1. Preparation of hybridization buffer</li>
+            <li>2. Hybridization of DNA aptamer (Pool<sub>99</sub>) + Output1</li>
+            <li>3. Confirmation of double strand formation by electrophoresis (PAGE)
+                <ul>
+                    <li>3-1. Electrophoresis in Hybridization Buffer</li>
+                    <li>3-2. Electrophoresis in Sterile Water</li>
+                    <li>3-3. Electrophoresis at 2x dilution of sample concentration and 1 × TAE/Mg<sup>2+</sup> buffer</li>
+                    <li>3-4. Electrophoresis in 0.5 × TBE</li>
+                </ul>
+            <li>4. Confirmation of Output release by electrophoresis (PAGE)</li>
+                <ul>
+                    <li>4-1. Electrophoresis in C4-HSL at different concentrations</li>
+                    <li>4-2 Electrophoresis in excess amounts of C4-HSL</li>
+                </ul>
+            <li>5. Conclusion</li>
+            <li>6. References</li>
         </section>
-        <section>
-            <div>
-                <h2>Structure</h2>
-                <p>Quormone is attacked by aptamer.<br>
-                    Here, we proposed ...
-                </p>
-            </div>
-            <img src="images/MFE_aptamer.png" alt="explanation2">
+        <section class="scroll-point" id="area-2">
+            <h2>1. Preparation of hybridization buffer</h2>
+                <h4>【Method】</h4>
+                <p>The hybridization buffer was prepared using 10 × PBS (-), 4M MgCl<sub>2</sub>, and sterile water in the following amount.<sup>1)</sup> Note that the 10 × PBS (-) used in this experiment already contains more than 100mM NaCl, so the 1mM NaCl described in the paper<sup>1)</sup> was not used. On the other hand, for Mg<sup>2+</sup>, the preparation was performed to match the ratio. After preparation, the pH was checked.</p>
+                <h4>Preparation amount</h4>
+                
+                <table class="element">
+                    <tr><td>10 × PBS (−)</td><td><div class="volume">1mL</div></td></tr>
+                    <tr><td>4M MgCl<sub>2</sub></td><td><div class="volume">10mL</div></td></tr>
+                    <tr><td>Water</td><td><div class="volume">89mL</div></td></tr>
+                </table>
+                <table class="sum">
+                    <tr><td>Total</td><td><div class="volume">100mL</div></td></tr>
+                </table>
         </section>
+        <section class="scroll-point" id="area-3">
+            <h2>2. Hybridization of DNA aptamer (Pool<sub>99</sub>) + Output1</h2>
+                <h4>【Method】</h4>
+                <p>First, DNA Aptamer (Pool<sub>99</sub>) and Output1 were prepared to 1200nM with hybridization buffer. After preparation, DNA Aptamer (Pool<sub>99</sub>) (20 μL) was denatured at 95˚C for 5 min and cooled to 4˚C using a PCR thermal cycler. DNA Aptamer (Pool<sub>99</sub>) (20 μL) and Output1 (20 μL) were then mixed in a 1 : 1 ratio, and the sample was set in a PCR thermal cycler at 53˚C for 30 min, followed by 48˚C for at least 4 hr. The mixture was then held at 43˚C for 30 min and 38 ˚C for 4 hr.<sup>1)</sup></p>
+                <h4>Preparation amount</h4>
+                <p>C4-HSL Aptamer (99bp)</p>
+                <table class="element">
+                    <tr><td>C4-HSL Aptamer</td><td><div class="volume">0.48μL</div></td></tr>
+                    <tr><td>Hybridization buffer</td><td><div class="volume">39.52μL</div></td></tr>
+                </table>
+                <table class="sum">
+                    <tr><td>Total</td><td><div class="volume">40μL (1200nM)</div></td></tr>
+                </table>
+                <p>Output1 (C50, 32bp)</p>
+                <table class="element">
+                    <tr><td>C50</td><td><div class="volume">0.48μL</div></td></tr>
+                    <tr><td>Hybridization buffer</td><td><div class="volume">39.52μL</div></td></tr>
+                </table>
+                <table class="sum">
+                    <tr><td>Total</td><td><div class="volume">40μL (1200nM)</div></td></tr>
+                </table>
+        </section>
+        <section class="scroll-point" id="area-4">
+            <h2>3. Confirmation of double strand formation by electrophoresis (PAGE)</h2>
+                <p>This experiment is to confirm the hybridization of DNA Aptamer (Pool<sub>99</sub>) and Output1. Hybridization of the DNA Aptamer (Pool<sub>99</sub>) and  Output1 was confirmed by electrophoresis (PAGE).</p>
+                <p>First, polyacrylamide gels were prepared using 10 W/ V.% Acrylamide Bis Mixed Solution (29 : 1), 1 × TAE/ Mg<sup>2+</sup> buffer and initiator (APS + TEMED). Electrophoresis was then performed.</p>
+                <h3>3-1. PAGE in Hybridization Buffer</h3>
+                    <h4>【Experimental Procedure】</h4>
+                    <p>First, polyacrylamide gels were prepared by mixing 10W/ V. % Acrylamide Bis Mixed Solution (29 : 1), 1 × TAE/ Mg<sup>2+</sup> buffer and initiator (APS + TEMED) in the following preparation amounts. Then, electrophoresis was performed at 150V, 15mA, 35min.</p>
+                    <h4>Preparation amount</h4>
+                    <table>
+                        <tr><td>10W/ V. % Acrylamide Bis Mixed Solution (29 : 1)</td><td>10mL</td></tr>
+                        <tr><td>APS</td><td>100μL</td></tr>
+                        <tr><td>TEMED</td><td>10μL</td></tr>
+                    </table>
+                    <h4>【Results and Discussion】</h4>
+                    <p>The results of Experiment 3-1 are shown in Fig.1</p>
+                    <img src="images/experimentFig.1.png">
+                    <p>Fig.1 PAGE analysis</p>
+                    <p>(lane 1: ladder (20bp, 7µL), lane 2: Output1 (600nM, 15µL), lane 3: DNA Aptamer (Pool<sub>99</sub>) (600nM, 15µL ), lane 4: Output1-DNA Aptamer (Pool<sub>99</sub>) (600nM, 15µL))</p>
+                    <p>Fig.1 shows that lane 1 prepared with sterile water migrated well, whereas lanes 2, 3, and 4 prepared with hybridization buffer did not. This could be due to the high salt concentration in the hybridization buffer. Therefore, we thought that there might be a problem with the hybridization buffer. We then performed electrophoresis under equivalent conditions, using sterile water for lanes 2 and 3, and hybridization buffer in lane 4 in Experiment 3-2.</p>
+                <h3>3-2 Electrophoresis in Sterile Water</h3>
+                    <h4>【Method】</h4>
+                    <p>The polyacrylamide gel was prepared under the same conditions as those described earlier for electrophoresis in hybridization buffer, and electrophoresis was performed at 150V, 15mA, 35min.</p>
+                    <h4>【Results and Discussion】</h4>
+                    <p>Fig.2 shows the results of Experiment 3-2.<br>
+                    (Lane 2 and 3 are done with sterile water, and lane 4 is done with hybridization buffer.)</p>
+                    <img src="images/experimentFig.2.png">
+                    <p>Fig.2 PAGE analysis</p>
+                    <p>(lane 1: ladder (20bp, 7µL), lane 2: Output1 (600nM, 15µL), lane 3: DNA Aptamer (Pool<sub>99</sub>) (600nM, 15µL), lane 4: Output1-DNA Aptamer (Pool<sub>99</sub>) (600nM, 15µL) )</p>
+                    <p>Fig.2 shows that the cells in lanes 1, 2, and 3 in sterile water migrated well, whereas those in lane 4 did not. While the peaks in lanes 1 and 2 appeared clear, a white peak was observed in lane 3, where the peak of DNA Aptamer (Pool<sub>99</sub>) should have appeared. In addition, broad peaks were observed throughout the lanes. Presumably, this is due to the high concentration of the samples. Therefore, the sample concentration was diluted 2-fold, the buffer was changed to 1 × TAE/Mg<sup>2+</sup>, and electrophoresis was performed again in Experiment 3-3.</p>
+                <h3>3-3. Electrophoresis at 2x dilution of sample concentration and 1 × TAE/Mg<sup>2+</sup> buffer</h3>
+                    <h4>【Method】</h4>
+                    <p>The polyacrylamide gel was prepared under the same conditions as those described earlier for electrophoresis in hybridization buffer in prior experiments., and electrophoresis was performed at 150V, 15mA, 35min.</p>
+                    <h4>【Results and Discussion】</h4>
+                    <p>Fig.3 shows the results of Experiment 3-3.</p>
+                    <img src="images/experimentFig.3.png">
+                    <p>Fig.3 PAGE analysis</p>
+                    <p>(lane 1: ladder (20bp, 7µL), lane 2: Output1 (300nM, 15µL), lane 3: DNA Aptamer (Pool<sub>99</sub>) (300nM, 15µL), lane 4: Output1 - DNA Aptamer (Pool<sub>99</sub>) (300nM, 15µL), lane 5: ladder (20bp, 7µL))</p>
+                    <p>In Fig.3, broad peaks were observed in lanes 2, 3, and 4. This might be because the amounts of loaded solutions were too large. Therefore, the next step was to reduce the volume of liquid flowing into the wells and to perform electrophoresis with TBE as the buffer. Therefore, the next step was to reduce the volume of liquid flowing into the wells and to perform electrophoresis with TBE as the buffer, which has a higher resolution than TAE.</p>
+                <h3>3-4. Electrophoresis in 0.5 × TBE</h3>
+                    <h4>【Method】</h4>
+                    <p>The polyacrylamide gel was prepared under the same conditions as those described earlier for electrophoresis in hybridization buffer, and electrophoresis was performed at 150V, 15mA, 35min.</p>
+                    <h4>【Results and Discussion】</h4>
+                    <p>Fig.4 shows the results of Experiment 3-4.</p>
+                    <img src="images/experimentFig.3.png">
+                    <p>Fig.4 PAGE analysis</p>
+                    <p>(lane 1: ladder (20bp, 7µL), lane 2: Output1 (300nM, 7.5µL), lane 3: DNA Aptamer (Pool<sub>99</sub>) (300nM, 7.5µL), lane 4: Output1 - DNA Aptamer (Pool<sub>99</sub>) (300nM, 7.5µL), lane 5: ladder (20bp, 7µL))</p>
+                    <p>Fig.4 shows that a single peak between 20bp and 40bp (peak 1) appeared in lane 2. Also, a single peak between 80bp and 100bp (peak 2) appeared in lane 3. In lane 4, three peaks have appeared, peak 1, peak 2, and a peak between 120bp and 140bp (peak3). Peak 1 and 2 in lane 4 are Output1 and DNA Aptamer (Pool<sub>99</sub>) that were not hybridized. Since peak 3 is the sum of peak 1 and peak 2, we confirmed the success of hybridization of Output1 and DNA Aptamer (Pool<sub>99</sub>).</p>
+        </section>
+        <section class="scroll-point" id="area-5">
+            <h2>4. Confirmation of Output1 release by electrophoresis (PAGE)</h2>
+                <p>This experiment is to confirm the release of Output 1 when the C4-HSL (quormone) is added. The release of Output 1 with the addition of  C4-HSL (quormone) was confirmed by electrophoresis (PAGE).</p>
+                <h3>4-1 Electrophoresis in C4-HSL at different concentrations</h3>
+                    <h4>【Method】</h4>
+                    <p>The polyacrylamide gel was prepared under the same conditions as those described earlier for electrophoresis in hybridization buffer, and electrophoresis was performed at 150V, 15mA, 35min.</p>
+                    <h4>【Results and Discussion】</h4>
+                    <p>Figure 5 shows the results of Experiment 4.</p>
+                    <img src="images/experimentFig.5.png">
+                    <p>Fig.5 PAGE analysis</p>
+                    <p>(lane 1: ladder (20bp, 7µL), lane 2: 0nM (7.5µL), lane 3: 25nM (7.5µL), lane 4: 50nM (7.5µL), lane 5: 100nM (7.5µL), lane 6: 200nM (7.5µL), lane 7: 300nM (7.5µL), lane 8: 600nM (7.5µL), lane 9: ladder (20bp, 7µL))</p>
+                    <p>Fig.5 shows that Output1 was not released at all concentrations. This is due to the fact that the concentration of C4-HSL was too low. Therefore, the next step was to add an excess amount of C4-HSL and perform the same conditions.</p>
+                <h3>4-2 Electrophoresis in excess amounts of C4-HSL</h3>
+                    <h4>【Method】</h4>
+                    <p>The polyacrylamide gel was prepared under the same conditions as those described earlier for electrophoresis in hybridization buffer. Then, 1mM of C4-HSL was added and electrophoresis was performed at 150V, 15mA, 35min.</p>
+                    <h4>【Results and Discussion】</h4>
+                    <p>Fig.6 shows the results of Experiment 4-2.</p>
+                    <img src="images/experimentFig.6.png">
+                    <p>Fig.6 PAGE analysis</p>
+                    <p>(lane 1: ladder (20bp, 7µL), lane 2: 300nM Output1 (7.5µL), lane 3: 300nM DNA Aptamer (Pool<sub>99</sub>) (7.5µL), lane 4: 300nM Output1 - DNA Aptamer (Pool<sub>99</sub>) (7.5µL), lane 5: 300nM Output1 - DNA Aptamer (Pool<sub>99</sub>) plus 1mM C4-HSL, lane 6: ladder (20bp, 7μL))</p>
+                    <p>Fig.6 shows that the peaks at 120bp to 140bp disappeared from lane 4 and lane 5. Since peaks similar to those of Output1 (32bp) and DNA Aptamer (99bp) were observed, we consider that double-stranded DNA of Output1 - DNA Aptamer (Pool<sub>99</sub>) (131bp)  dissociated into single-stranded DNA of Output1(32bp) and DNA Aptamer(99bp).<br>
+                       It can also be seen that the Output1 (32bp) and DNA Aptamer (Pool<sub>99</sub>) peaks of lane 5 are darker in color compared to lane 4. This confirms the dissociation of Output1 - DNA Aptamer (Pool<sub>99</sub>) (131bp) into Output2 and DNA Aptamer and the release of Output2.<br>
+                       The hybridized double-stranded DNA of Output1 - DNA Aptamer (Pool<sub>99</sub>) was found to function as an aptamer for C4-HSL.</p>
+        </section>
+        <section class="scroll-point" id="area-6">
+            <h2>5. Conclusion</h2>
+            <p>Initially, the double-strand formation of Output1 and DNA Aptamer (Pool<sub>99</sub>) was confirmed by electrophoresis (PAGE) using hybridization buffer. However, the salt concentration in the hybridization buffer was too high to confirm double-strand formation.<br>
+                The double-strand formation was confirmed when the buffer was changed to 1 × TAE/ Mg<sup>2+</sup>. Therefore, we will change the buffer to 1 × TAE/ Mg<sup>2+</sup> and try to confirm the release of Output1 by adding C4-HSL and checking it by PAGE in the future.</p>
+        </section>
+        <section class="scroll-point" id="area-7">
+            <h2>References</h2>
+            <li>1) M. Zhao, <i>et al. PLoS ONE</i> 2019, <i>14(2)</i>, e0212041.</li>
+        </section>
+
     </main>
-    </body>
+    <aside id="sub-area">
+        <nav id="g-nav">
+            <ul id="g-navi">
+                <li><a href="#area-1">Experimental Items</a></li>
+                <li><a href="#area-2">Preparation of hybridization buffer</a></li>
+                <li><a href="#area-3">Hybridization of DNA aptamer (Pool<sub>99</sub>) + Output1</a></li>
+                <li><a href="#area-4">Confirmation of double strand formation by electrophoresis (PAGE)</a></li>
+                <li><a href="#area-5">Confirmation of Output release by electrophoresis (PAGE)</a></li>
+                <li><a href="#area-6">Conclusion</a></li>
+            </ul>
+        </nav>
+    </aside>
+</div>
+</body>
 <div id="footer"></div>
 </html>
