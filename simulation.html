@@ -74,10 +74,10 @@
             \begin{eqnarray}
             \frac{d[s]}{dt}=\sum_{{tmp}\in{I_s}}{&phi;}_{tmp}^{in}(t)+\sum_{{tmp}\in{O_s}}{&phi;}_{tmp}^{out}(t)-{exo}_s(t)・[s](t)
             \end{eqnarray}
-            <li>I<sub>s</sub>=The set of all templates which have input domains for signal s</li>
-            <li>O<sub>s</sub>=The set of all templates which have output domains for signal s </li>
-            <li>&phi;=The flow of the input/output of template tmp</li>
-            <li>ex0=the exonuclease activity</li>
+            <li>I<sub>s</sub>=The set of all templates accepting s as input</li>
+            <li>O<sub>s</sub>=The set of all templates generating s</li>
+            <li>&phi;=The fow of the input/output of template tmp</li>
+            <li>exo=The activity of the exonuclease enzyme with respect to s at time t</li>
             <p>The directed graph displayed by DACCAD is shown below.</p>
             <img src="images/DACCADimage.png">
             <p>Fig.5 The directed graph on DACCAD screen(S1: Aptamer, S2: Input from aptamer sensor).</p>
@@ -112,7 +112,7 @@
         </section>
         <section class="scroll-point" id="area-5">
             <h2>Threshold setting</h2>
-            <p>he concentration of drain is determined from the results of changes in the concentration of aptamer from the start of the reaction. A graph was created with 1/Ct on the vertical axis and the concentration of drain on the horizontal axis.</p>
+            <p>The concentration of drain is determined from the results of changes in the concentration of aptamer from the start of the reaction. A graph was created with 1/Ct on the vertical axis and the concentration of drain on the horizontal axis.<sup>2)</sup></p>
             <img src="images/1Ct_DrainConcentration.png">
             <p>Fig.7 The scatter plot of 1/Ct  with different drain concentrations.</p>
             <p>From the above, the threshold drain concentration was set to 200nM.</p>
@@ -123,7 +123,9 @@
         </section>
         <section class="scroll-point" id="area-6">
             <h2>References</h2>
-            <li></li>
+            <li>1) N. Aubert‑Kato, <i>et al. New Gener. Comput</i> 2020, <i>38</i>, 341-366.</li>
+            <li>2) K. Montagne, <i>et al. Nat Commun</i> 2016, <i>7</i>, 13474 </li>
+
         </section>
     </main>
     <aside id="sub-area">
