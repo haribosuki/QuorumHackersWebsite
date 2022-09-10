@@ -72,7 +72,7 @@
             <p>The PEN toolbox is used as a mechanism to detect the input from the sensor and produce Aptamer outputs. Since the PEN toolbox requires consideration of the interaction between the DNA strand and the enzyme in the reaction process, each reaction is non-linear. In designing the amplification circuit, a schematic design of the reaction system was performed using DACCAD.</p>
             <p>DNA Artificial Circuits Computer-Assisted Design (DACCAD) is software developed for the purpose of quickly and easily designing complex circuits such as the PEN toolbox using directed graphs. When simulating with DACCAD, we predict changes in signal concentration based on the following theory.<sup>1)</sup></p>
             \begin{eqnarray}
-            \frac{d[s]}{dt}=\sum_{{tmp}\in{I_s}}^{n}{&phi;}_{tmp}^{in}(t)+\sum_{{tmp}\in{O_s}}^{n}{&phi;}_{tmp}^{out}(t)-{exo}_s(t)・[s](t)
+            \frac{d[s]}{dt}=\sum_{{tmp}\in{I_s}}{&phi;}_{tmp}^{in}(t)+\sum_{{tmp}\in{O_s}}{&phi;}_{tmp}^{out}(t)-{exo}_s(t)・[s](t)
             \end{eqnarray}
             <li>I<sub>s</sub>=The set of all templates which have input domains for signal s</li>
             <li>O<sub>s</sub>=The set of all templates which have output domains for signal s </li>
