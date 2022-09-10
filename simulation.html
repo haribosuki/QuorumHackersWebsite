@@ -18,6 +18,9 @@
     <script src=”js/stickyfill.min.js”></script> <!--subnavのJS　Gitから-->
     <script src=”js/stickyfill.js”></script> <!--subnavのJS　Gitから-->
     <script src="js/5-1-26_for_simulation.js"></script> <!--現在地表示の自作のJS-->
+    <script type="text/javascript" async 
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
 
 
 
@@ -46,37 +49,42 @@
         <section class="scroll-point" id="area-2">
             <h2>Thermodynamic simulation</h2>
             <p>The thermodynamic stability of the DNA strand was investigated using DINAMelt.</p>
-            <p>The Tm values for hybridization of DNA Aptamer (Pool99) and output 1 and the predicted heat capacity of the complex are shown below.</p>
+            <p>The Tm values for hybridization of DNA Aptamer (Pool<sub>99</sub>) and output 1 and the predicted heat capacity of the complex are shown below.</p>
             <img src="images/aptamer+output_Tm.png">
-            <p>Fig.1 The Tm values for hybridization of DNA Aptamer (Pool99) and output 1 (NaCl:40mM  MgCl<sub>2</sub>:12.5mM)</p>
-            <p>The predicted Tm value was 66.0°C. This result confirms that thermal dissociation of output1 from DNA Aptamer (Pool99) does not occur at 37°C.</p>
+            <p>Fig.1 The Tm values for hybridization of DNA Aptamer (Pool<sub>99</sub>) and output 1 (NaCl:40mM  MgCl<sub>2</sub>:12.5mM)</p>
+            <p>The predicted Tm value was 66.0°C. This result confirms that thermal dissociation of output1 from DNA Aptamer (Pool<sub>99</sub>) does not occur at 37°C.</p>
         </section>
         <section class="scroll-point" id="area-3">
             <h2>Structural prediction</h2>
-            <p>The prediction of secondary structure of DNA Aptamer (Pool99) was performed using NUPACK. The results are shown below.</p>
+            <p>The prediction of secondary structure of DNA Aptamer (Pool<sub>99</sub>) was performed using NUPACK. The results are shown below.</p>
             <img src="images/NUPACK_Aptamer.png">
-            <p>Fig.2 The predicted secondary structure of DNA Aptamer (Pool99).</p>
-            <p>Similarly, the prediction of secondary structure for the Aptamer sensor (DNA Aptamer (Pool99) + output 1) was conducted. The results are shown below.</p>
+            <p>Fig.2 The predicted secondary structure of DNA Aptamer (Pool<sub>99</sub>).</p>
+            <p>Similarly, the prediction of secondary structure for the Aptamer sensor (DNA Aptamer (Pool<sub>99</sub>) + output 1) was conducted. The results are shown below.</p>
             <img src="images/NUPACK_Aptamer+output1.png">
             <p>Fig.3 The predicted secondary structure of Aptamer sensor.</p>
 
-            <p>We also used 3dRNA/DNA to predict the tertiary structure of DNA Aptamer (Pool99). The result is shown below.</p>
+            <p>We also used 3dRNA/DNA to predict the tertiary structure of DNA Aptamer (Pool<sub>99</sub>). The result is shown below.</p>
             <img src="images/yp_aptamer_noaxis.png">
-            <p>Fig.4 The predicted tertiary structure of DNA Aptamer (Pool99).</p>
+            <p>Fig.4 The predicted tertiary structure of DNA Aptamer (Pool<sub>99</sub>).</p>
         </section>
         <section class="scroll-point" id="area-4">
             <h2>The design of amplification circuit</h2>
             <p>The PEN toolbox is used as a mechanism to detect the input from the sensor and produce Aptamer outputs. Since the PEN toolbox requires consideration of the interaction between the DNA strand and the enzyme in the reaction process, each reaction is non-linear. In designing the amplification circuit, a schematic design of the reaction system was performed using DACCAD.</p>
-            <p>DNA Artificial Circuits Computer-Assisted Design (DACCAD) is software developed for the purpose of quickly and easily designing complex circuits such as the PEN toolbox using directed graphs. When simulating with DACCAD, we predict changes in signal concentration based on the following theory.</p>
-            &phi;<sup>in</sup><sub>temp</sub>
-            <img src="images/DACCADtheory.png">
+            <p>DNA Artificial Circuits Computer-Assisted Design (DACCAD) is software developed for the purpose of quickly and easily designing complex circuits such as the PEN toolbox using directed graphs. When simulating with DACCAD, we predict changes in signal concentration based on the following theory.<sup>1)</sup></p>
+            \begin{eqnarray}
+            \frac{d[s]}{dt}=\sum_{{tmp}\in{I_s}}^{n}{&phi;}_{tmp}^{in}(t)+\sum_{{tmp}\in{O_s}}^{n}{&phi;}_{tmp}^{out}(t)-{exo}_s(t)・[s](t)
+            \end{eqnarray}
+            <li>I<sub>s</sub>=The set of all templates which have input domains for signal s</li>
+            <li>O<sub>s</sub>=The set of all templates which have output domains for signal s </li>
+            <li>&phi;=The flow of the input/output of template tmp</li>
+            <li>ex0=the exonuclease activity</li>
             <p>The directed graph displayed by DACCAD is shown below.</p>
             <img src="images/DACCADimage.png">
             <p>Fig.5 The directed graph on DACCAD screen(S1: Aptamer, S2: Input from aptamer sensor).</p>
             <p>For the signal from the sensor and the DNA strand of drain, we added the reaction by using COPASI. COmplex PAthway Simulator (COPASI) is an application software for simulation and analysis of biochemical networks and dynamics.</p>
             <img src="images/bistable_abstract.png">
             <p>Dissociation constants were determined from the Gibbs free energy for each DNA strand according to the number of bases of the strand. Each Gibbs free energy was predicted using DINAMelt.</p>
-            <p>The concentration of input1 used in the simulation was estimated under the condition of 5 nM of quormone concentration, which is considered to form biofilms. Assuming that the diameter of "Quorum Hacker" is 20 µm and that 0.001% of the DNA aptamers are present relative to the total number of lipid molecules on the GUVs surface, the concentration of DNA aptamers on the lipid bilayer surface relative to the volume of GUVs is estimated to be 540 nM. Solving the equation below using the reported dissociation constant for DNA aptamers, Kd = 28.47, we find that under a 5 nM quormone concentration, approximately 80 nM of DNA aptamers react, releasing an equivalent amount of output1. Since the amount of output1 actually recognized by the transmembrane signalling mechanism is decayed by auto-diffusion, the simulation was performed at concentrations less than 1/100 of the released concentration.</p>
+            <p>The concentration of input1 used in the simulation was estimated under the condition of 5nM of quormone concentration, which is considered to form biofilms. Assuming that the diameter of "Quorum Hacker" is 20 µm and that 0.001% of the DNA aptamers are present relative to the total number of lipid molecules on the GUVs surface, the concentration of DNA aptamers on the lipid bilayer surface relative to the volume of GUVs is estimated to be 540nM. Solving the equation below using the reported dissociation constant for DNA aptamers, Kd = 28.47, we find that under a 5nM quormone concentration, approximately 80 \nM of DNA aptamers react, releasing an equivalent amount of output1. Since the amount of output1 actually recognized by the transmembrane signalling mechanism is decayed by auto-diffusion, the simulation was performed at concentrations less than 1/100 of the released concentration.</p>
             [AB] = <span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center;">
                         <span style="padding: 0 10px; border-bottom: 1px solid #000000;">
                             [C]
@@ -115,11 +123,7 @@
         </section>
         <section class="scroll-point" id="area-6">
             <h2>References</h2>
-            <li>1) M. Zhao, <i>et al. PLoS ONE</i> 2019, <i>14(2)</i>, e0212041.</li>
-            <li>2) G. Liu, <i>et al. Anal. Chem.</i> 2021, <i>93</i>, 13807-13814.</li>
-            <li>3) M. Z. Gines, <i>et al. Nat. Commun.</i> 2016, <i>7</i>, 13474.</li>
-            <li>4) C. Z. Wang, <i>et al. Nat. Chem. Biol.</i> 2018, <i>14</i>, 86-93.</li>
-            <li>5) Y. Tamba, <i>et al. J. Phys. Chem. B</i> 2010, <i>114</i>, 12018-12026.</li>
+            <li></li>
         </section>
     </main>
     <aside id="sub-area">
