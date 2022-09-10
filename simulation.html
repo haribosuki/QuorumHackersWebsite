@@ -41,21 +41,21 @@
         <section class="scroll-point" id="area-1">
             <h2>Simulation Items</h2>
             <li>1. Thermodynamic simulation</li>
-            <li>2. Structural prediction</li>
+            <li>2. Structural prediction of DNA Aptamer</li>
             <li>3. The design of amplification circuit</li>
             <li>4. Threshold setting</li>
             <p>Before the experiments of electrophoresis, we made predictions about the stability of each DNA strand and the possible conformations it could take. We also simulated the threshold values and amplification rates for the amplification mechanism inside the molecular robot.</p>
         </section>
         <section class="scroll-point" id="area-2">
             <h2>Thermodynamic simulation</h2>
-            <p>The thermodynamic stability of the DNA strand was investigated using DINAMelt.</p>
-            <p>The Tm values for hybridization of DNA Aptamer (Pool<sub>99</sub>) and output 1 and the predicted heat capacity of the complex are shown below.</p>
+            <p>The thermodynamic stability of the DNA strand was investigated using DINAMelt.<br>
+               The Tm values for hybridization of DNA Aptamer (Pool<sub>99</sub>) and Output 1 and the predicted heat capacity of the complex are shown below.</p>
             <img src="images/aptamer+output_Tm.png">
             <p>Fig.1 The Tm values for hybridization of DNA Aptamer (Pool<sub>99</sub>) and output 1 (NaCl:40mM  MgCl<sub>2</sub>:12.5mM)</p>
             <p>The predicted Tm value was 66.0°C. This result confirms that thermal dissociation of output1 from DNA Aptamer (Pool<sub>99</sub>) does not occur at 37°C.</p>
         </section>
         <section class="scroll-point" id="area-3">
-            <h2>Structural prediction</h2>
+            <h2>Structural prediction of DNA Aptamer</h2>
             <p>The prediction of secondary structure of DNA Aptamer (Pool<sub>99</sub>) was performed using NUPACK. The results are shown below.</p>
             <img src="images/NUPACK_Aptamer.png">
             <p>Fig.2 The predicted secondary structure of DNA Aptamer (Pool<sub>99</sub>).</p>
@@ -74,17 +74,17 @@
             \begin{eqnarray}
             \frac{d[s]}{dt}=\sum_{{tmp}\in{I_s}}{&phi;}_{tmp}^{in}(t)+\sum_{{tmp}\in{O_s}}{&phi;}_{tmp}^{out}(t)-{exo}_s(t)・[s](t)
             \end{eqnarray}
-            <li>I<sub>s</sub>=The set of all templates accepting s as input</li>
-            <li>O<sub>s</sub>=The set of all templates generating s</li>
-            <li>&phi;=The fow of the input/output of template tmp</li>
-            <li>exo=The activity of the exonuclease enzyme with respect to s at time t</li>
+            <li>I<sub>s</sub> = The set of all templates accepting s as input</li>
+            <li>O<sub>s</sub> = The set of all templates generating s</li>
+            <li>&phi; = The fow of the input/output of template tmp</li>
+            <li>exo = The activity of the exonuclease enzyme with respect to s at time t</li>
             <p>The directed graph displayed by DACCAD is shown below.</p>
             <img src="images/DACCADimage.png">
             <p>Fig.5 The directed graph on DACCAD screen(S1: Aptamer, S2: Input from aptamer sensor).</p>
             <p>For the signal from the sensor and the DNA strand of drain, we added the reaction by using COPASI. COmplex PAthway Simulator (COPASI) is an application software for simulation and analysis of biochemical networks and dynamics.</p>
             <img src="images/bistable_abstract.png">
             <p>Dissociation constants were determined from the Gibbs free energy for each DNA strand according to the number of bases of the strand. Each Gibbs free energy was predicted using DINAMelt.</p>
-            <p>The concentration of input1 used in the simulation was estimated under the condition of 5nM of quormone concentration, which is considered to form biofilms. Assuming that the diameter of "Quorum Hacker" is 20 µm and that 0.001% of the DNA aptamers are present relative to the total number of lipid molecules on the GUVs surface, the concentration of DNA aptamers on the lipid bilayer surface relative to the volume of GUVs is estimated to be 540nM. Solving the equation below using the reported dissociation constant for DNA aptamers, Kd = 28.47, we find that under a 5nM quormone concentration, approximately 80 \nM of DNA aptamers react, releasing an equivalent amount of output1. Since the amount of output1 actually recognized by the transmembrane signalling mechanism is decayed by auto-diffusion, the simulation was performed at concentrations less than 1/100 of the released concentration.</p>
+            <p>The concentration of Input 1 used in the simulation was estimated under the condition of 5 nM of quormone concentration, which is considered to form biofilms. Assuming that the diameter of "Quorum Hacker" is 20 µm and that 0.001% of the DNA aptamers are present relative to the total number of lipid molecules on the GUVs surface, the concentration of DNA aptamers on the lipid bilayer surface relative to the volume of GUVs is estimated to be 540 nM. Solving the equation below using the reported dissociation constant for DNA aptamers, Kd = 28.47, we find that under a 5 nM quormone concentration, approximately 80 nM of DNA aptamers react, releasing an equivalent amount of Output 1. Since the amount of output1 actually recognized by the transmembrane signalling mechanism is decayed by auto-diffusion, the simulation was performed at concentrations less than 1/100 of the released concentration.</p>
             [AB] = <span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center;">
                         <span style="padding: 0 10px; border-bottom: 1px solid #000000;">
                             [C]
@@ -104,8 +104,9 @@
             <li>[AB] = DNA aptamer and C4-HSL complex (Aptamer sensor)</li>
             <li>[C] = Concentration of DNA aptamer</li>
             <li>Kd = Dissociation constant</li>
-            <p>The following demonstrates a circuit in which 0.5nM input is detected, resulting in amplification of aptamer.</p>
-            <p>The initial concentrations of template2to1, which outputs aptamer by the input, template1to1, which amplifies input, and the initial concentrations of input were set at 10nM, 100nM, and 0.5nM, respectively. Then, COPASI was used to simulate the change in concentration of aptamer at different drain concentrations.</p>
+            <p>The following demonstrates a circuit in which 0.5 nM input is detected, resulting in amplification of aptamer.</p>
+            <p>The initial concentrations of template2to1, which outputs aptamer by the input, template1to1, which amplifies input, and the initial concentrations of input were set at 10 nM, 100 nM, and 0.5 nM, respectively. 
+                Then, COPASI was used to simulate the change in concentration of aptamer at different drain concentrations.</p>
             <img src="images/Aptamer_DifferentDrain.png">
             <p>Fig.6　Change in aptamer concentration with different drain concentrations</p>
             <p>Ct in Fig.6 represents the amplification start time of aptamer at each drain concentration. The start time of Aptamer amplification increased with increasing drain concentration, and the concentration remained constant after Ct.</p>
@@ -115,8 +116,8 @@
             <p>The concentration of drain is determined from the results of changes in the concentration of aptamer from the start of the reaction. A graph was created with 1/Ct on the vertical axis and the concentration of drain on the horizontal axis.<sup>2)</sup></p>
             <img src="images/1Ct_DrainConcentration.png">
             <p>Fig.7 The scatter plot of 1/Ct  with different drain concentrations.</p>
-            <p>From the above, the threshold drain concentration was set to 200nM.</p>
-            <p>Next, we simulated the changes in time of aptamer generation when different Inputs were given, when the concentration of DRAIN was set to 200nM.</p>
+            <p>From the above, the threshold drain concentration was set to 200 nM.</p>
+            <p>Next, we simulated the changes in time of aptamer generation when different Inputs were given, when the concentration of DRAIN was set to 200 nM.</p>
             <img src="images/aptamer_DifferentInput.png">
             <p>Fig.8 Change in aptamer concentration with different input concentrations</p>
             <p>The result above confirms that drain plays a role as threshold value.</p>
