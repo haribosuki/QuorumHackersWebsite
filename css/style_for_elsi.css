@@ -106,7 +106,13 @@ video {
     padding-bottom: 5px;
     text-indent: 1em;
 }
-
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+.hyou {
+    text-align: center;
+}
 
 /*ナビゲーションの固定*/
 /*ナビゲーションの固定*/

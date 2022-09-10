@@ -34,8 +34,11 @@ $(NavElem[2]).addClass('current');//3つめのliに現在地クラスを付与
 else if(scroll >= elemTop[3] && scroll < elemTop[4]) {//.scroll-point 3つめ（area-3）以上.scroll-point 4つめ（area-4）未満
 $(NavElem[3]).addClass('current');//4つめのliに現在地クラスを付与
 	}
-else if(scroll >= elemTop[4]) {// .scroll-point 4つめ（area-3）以上
-$(NavElem[4]).addClass('current');//5つめのliに現在地クラスを付与
+else if(scroll >= elemTop[4] && scroll < elemTop[5]) {//.scroll-point 3つめ（area-3）以上.scroll-point 4つめ（area-4）未満
+$(NavElem[4]).addClass('current');//4つめのliに現在地クラスを付与
+    }
+else if(scroll >= elemTop[5]) {// .scroll-point 4つめ（area-3）以上
+$(NavElem[5]).addClass('current');//5つめのliに現在地クラスを付与
 } 
 }
 
