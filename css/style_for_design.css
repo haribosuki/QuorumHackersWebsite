@@ -106,7 +106,9 @@ video {
     padding-bottom: 5px;
     text-indent: 1em;
 }
-
+.gif {
+    width: 100%;
+}
 
 /*ナビゲーションの固定*/
 /*ナビゲーションの固定*/
