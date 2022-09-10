@@ -76,7 +76,21 @@
             <img src="images/bistable_abstract.png">
             <p>Dissociation constants were determined from the Gibbs free energy for each DNA strand according to the number of bases of the strand. Each Gibbs free energy was predicted using DINAMelt.</p>
             <p>The concentration of input1 used in the simulation was estimated under the condition of 5 nM of quormone concentration, which is considered to form biofilms. Assuming that the diameter of "Quorum Hacker" is 20 µm and that 0.001% of the DNA aptamers are present relative to the total number of lipid molecules on the GUVs surface, the concentration of DNA aptamers on the lipid bilayer surface relative to the volume of GUVs is estimated to be 540 nM. Solving the equation below using the reported dissociation constant for DNA aptamers, Kd = 28.47, we find that under a 5 nM quormone concentration, approximately 80 nM of DNA aptamers react, releasing an equivalent amount of output1. Since the amount of output1 actually recognized by the transmembrane signalling mechanism is decayed by auto-diffusion, the simulation was performed at concentrations less than 1/100 of the released concentration.</p>
-            <img src="images/critical_concentration.png">
+            [AB] = <span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center;">
+                        <span style="padding: 0 10px; border-bottom: 1px solid #000000;">
+                            [C]
+                        </span>
+                        <span style="padding: 0 10px;">
+                            1 + <span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center;">
+                                    <span style="padding: 0 10px; border-bottom: 1px solid #000000;">
+                                        Kd
+                                    </span>
+                                    <span style="padding: 0 10px;">
+                                        [A]
+                                    </span>
+                                </span>
+                        </span>
+                    </span>
             <li>[A] = Concentration of C4-HSL</li>
             <li>[AB] = DNA aptamer and C4-HSL complex (Aptamer sensor)</li>
             <li>[C] = Concentration of DNA aptamer</li>
