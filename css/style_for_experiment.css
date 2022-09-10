@@ -143,7 +143,7 @@ table.element, td, th {
     /*Safari*/
     position: sticky;
     /*固定したい位置*/
-    top: 10%;
+    top: 25%;
     /*ナビゲーションの形状*/
     background: #fff;
     padding: 20px;
